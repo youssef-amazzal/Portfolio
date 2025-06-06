@@ -32,10 +32,14 @@ export const usePortfolioData = () => {
             isLoading.value = true
             error.value = null
 
-            // Use $fetch to call our API endpoint which works properly in both SSR and client-side
-            const data = await $fetch('/api/projects')
+            const response = await fetch('/data/projects.json')
             
-            // Handle both array format and object format with projects property
+            if (!response.ok) {
+                throw new Error(`Failed to fetch projects: ${response.status} ${response.statusText}`)
+            }
+            
+            const data = await response.json()
+            
             const projectData = Array.isArray(data) ? data : data.projects || []
               // Validate project data structure
             const validatedProjects = projectData.filter(project => {
@@ -79,8 +83,8 @@ export const usePortfolioData = () => {
      */
     const refreshProjects = () => {
         return fetchProjects(true)
-    }    // Auto-fetch data when composable is first used
-    if (projects.value.length === 0 && !isLoading.value) {
+    }    // Auto-fetch data when composable is first used (client-side only for static generation compatibility)
+    if (process.client && projects.value.length === 0 && !isLoading.value) {
         fetchProjects().catch(err => {
             console.error('Auto-fetch failed:', err)
         })

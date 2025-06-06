@@ -1,7 +1,7 @@
 <template>
     <div class="sidebar-info">
         <figure class="avatar-box">
-            <img src="/assets/images/pfp_square.webp" alt="Youssef AMAZZAL" width="120">
+            <img src="/assets/images/pfp_square.webp" alt="Youssef AMAZZAL">
         </figure>
 
         <div class="info-content">
@@ -142,9 +142,9 @@ defineEmits(['toggle'])
     }
 
     .avatar-box {
-        border-radius: 30px;
-        width: 160px;
-        height: 160px;
+        border-radius: 20px;
+        width: 120px;
+        height: 120px;
     }
 
     .info-content .name {

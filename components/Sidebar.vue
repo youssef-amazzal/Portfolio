@@ -65,12 +65,22 @@ const socialLinks = [
 <template>
     <aside class="sidebar" :class="{ 'active': isOpen }" data-sidebar>
         <AvatarSection name="Youssef Amazzal" :roles="roles" :is-open="isOpen" @toggle="toggleSidebar" />
-
         <div class="sidebar-info_more">
             <Separator />
             <ContactsList :contacts="contacts" />
             <Separator />
             <SocialLinks :social-links="socialLinks" />
+            <Separator />
+
+            <!-- Resume Download Button -->
+            <div class="resume-download">
+                <a href="/resume.pdf" download="Youssef_Amazzal_Resume.pdf" class="resume-btn">
+                    <div class="icon-box">
+                        <ion-icon name="download-outline"></ion-icon>
+                    </div>
+                    <span>Download Resume</span>
+                </a>
+            </div>
         </div>
     </aside>
 </template>
@@ -90,7 +100,7 @@ const socialLinks = [
 }
 
 .sidebar.active {
-    max-height: 405px;
+    max-height: 465px;
 }
 
 .sidebar-info_more {
@@ -104,14 +114,73 @@ const socialLinks = [
     visibility: visible;
 }
 
+/* Resume download button styles */
+.resume-download {
+    margin-top: 15px;
+}
+
+.resume-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: var(--eerie-black-1);
+    border: 1px solid var(--jet);
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--white-2);
+    font-size: var(--fs-7);
+    font-weight: var(--fw-500);
+    transition: var(--transition-1);
+}
+
+.resume-btn:hover {
+    background: var(--onyx);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.resume-btn .icon-box {
+    background: var(--border-gradient-onyx);
+    color: var(--primary-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.resume-btn:hover .icon-box {
+    background: var(--primary-color);
+}
+
+.resume-btn span {
+    flex: 1;
+    white-space: nowrap;
+}
+
 @media (min-width: 580px) {
     .sidebar {
-        max-height: 150px;
+        max-height: 155px;
         margin-bottom: 20px;
     }
 
     .sidebar.active {
-        max-height: 584px;
+        max-height: 644px;
+    }
+
+    .resume-btn {
+        padding: 14px 18px;
+        gap: 15px;
+    }
+
+    .resume-btn .icon-box {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
     }
 }
 
