@@ -50,9 +50,9 @@ defineEmits(['toggle'])
 
 .avatar-box {
     background: var(--bg-gradient-onyx);
-    border-radius: 20px;
-    width: 120px;
-    height: 120px;
+    border-radius: 15px;
+    width: 85px;
+    height: 85px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -142,7 +142,7 @@ defineEmits(['toggle'])
     }
 
     .avatar-box {
-        border-radius: 20px;
+        border-radius: 10px;
         width: 120px;
         height: 120px;
     }

@@ -94,7 +94,7 @@ const socialLinks = [
     padding: 15px;
     box-shadow: var(--shadow-1);
     z-index: 1;
-    max-height: 112px;
+    max-height: 115px;
     overflow: hidden;
     transition: var(--transition-2);
 }
