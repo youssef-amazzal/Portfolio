@@ -100,7 +100,7 @@ const socialLinks = [
 }
 
 .sidebar.active {
-    max-height: 465px;
+    max-height: 500px;
 }
 
 .sidebar-info_more {

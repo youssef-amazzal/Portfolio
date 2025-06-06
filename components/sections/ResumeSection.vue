@@ -42,7 +42,7 @@
                     <ul class="responsibilities-list">
                         <li v-for="responsibility in exp.responsibilities" :key="responsibility"
                             class="responsibility-item">
-                            {{ responsibility }}
+                            {{ responsibility }}``
                         </li>
                     </ul>
                 </li>
@@ -74,7 +74,6 @@
                         </div>
                     </div>
 
-                    <!-- Right column - Skills grid -->
                     <div class="skills-grid-column">
                         <div class="skills-grid">
                             <div v-for="skill in filteredSkills" :key="skill.name" class="skill-item">
@@ -89,7 +88,6 @@
                     </div>
                 </div>
 
-                <!-- Mobile Skills Grid (when dropdown is used) -->
                 <div class="skills-grid mobile-only">
                     <div v-for="skill in filteredSkills" :key="skill.name" class="skill-item">
                         <div class="skill-icon">
@@ -311,7 +309,7 @@ const setActiveCategory = (category) => {
 
 /* Hide desktop tabs by default (mobile first) */
 .desktop-only {
-    display: none;
+    display: none !important;
 }
 
 .skills-layout {
@@ -461,14 +459,16 @@ const setActiveCategory = (category) => {
         width: 8px;
         left: -43px;
     }
+}
 
-    /* Show tabs, hide dropdown on larger screens */
+/* Show tabs only on desktop screens (1024px+) */
+@media (min-width: 1024px) {
     .desktop-only {
-        display: flex;
+        display: flex !important;
     }
 
     .mobile-only {
-        display: none;
+        display: none !important;
     }
 
     .skills-grid {
