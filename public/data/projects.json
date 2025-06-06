@@ -1,0 +1,58 @@
+[
+  {
+    "id": "skynet",
+    "title": "Skynet",
+    "category": "development",
+    "image": "/assets/portfolio/dev/skynet/skynet.webp",
+    "description": "It is an academic project that aims to provide a comprehensive flight booking platform for both passengers and airlines.",
+    "tools": [
+      { "name": "Vue.js", "icon": "logo-vue" },
+      { "name": "Node.js", "icon": "logo-nodejs" },
+      { "name": "MongoDB", "icon": "server-outline" },
+      { "name": "Docker", "icon": "cube-outline" },
+      { "name": "WebSocket", "icon": "pulse-outline" }
+    ],
+    "date": "2022",
+    "client": "Personal Project",
+    "clientLogo": null,
+    "clientWebsite": null,
+    "projectLink": "https://github.com/youssef-amazzal/Skynet",
+    "gallery": [
+      "/assets/portfolio/dev/skynet/img_0.webp",
+      "/assets/portfolio/dev/skynet/img_1.webp",
+      "/assets/portfolio/dev/skynet/img_2.webp",
+      "/assets/portfolio/dev/skynet/img_3.webp",
+      "/assets/portfolio/dev/skynet/img_4.webp",
+      "/assets/portfolio/dev/skynet/img_5.webp",
+      "/assets/portfolio/dev/skynet/img_6.webp",
+      "/assets/portfolio/dev/skynet/img_7.webp"
+    ]
+  },
+  {
+    "id": "nwita-f-tech",
+    "title": "Nwita F Tech",
+    "category": "design",
+    "image": "/assets/portfolio/design/nwita-f-tech/nwita_logo_v1.webp",
+    "description": "A visual identity I've created for an instagram page that explains tech and IT concepts in Moroccan Darija",
+    "tools": [
+      { "name": "Adobe Illustrator", "icon": "logo-adobe-illustrator" },
+      { "name": "Adobe Photoshop", "icon": "logo-adobe-photoshop" }
+    ],
+    "client": "Nwita F Tech",
+    "clientLogo": "/assets/clients/nwita_f_tech.ico",
+    "clientWebsite": "https://www.instagram.com/nwita_ftech/",
+    "projectLink": "https://www.instagram.com/nwita_ftech/",
+    "date": "2025",
+    "gallery": [
+      "/assets/portfolio/design/nwita-f-tech/nwita_logo_v1.webp",
+      "/assets/portfolio/design/nwita-f-tech/nwita_f_tech_slide_1.webp",
+      "/assets/portfolio/design/nwita-f-tech/nwita_f_tech_slide_2.webp"
+    ]
+  },
+  {
+    "id": "ENSET Challenge 2025",
+    "title": "ENSET Challenge 2025",
+    "category": "design",
+    "image": "assets/portfolio/design/N7C_logo_long.webp"
+  }
+]
