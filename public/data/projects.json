@@ -6,16 +6,17 @@
     "image": "/assets/portfolio/dev/skynet/skynet.webp",
     "description": "It is an academic project that aims to provide a comprehensive flight booking platform for both passengers and airlines.",
     "tools": [
-      { "name": "Vue.js", "icon": "logo-vue" },
-      { "name": "Node.js", "icon": "logo-nodejs" },
-      { "name": "MongoDB", "icon": "server-outline" },
-      { "name": "Docker", "icon": "cube-outline" },
-      { "name": "WebSocket", "icon": "pulse-outline" }
+      { "name": "Java/JavaFX", "icon": "/assets/tools/java.ico" },
+      { "name": "Sqlite", "icon": "/assets/tools/sqlite.ico" }
     ],
     "date": "2022",
-    "client": "Personal Project",
-    "clientLogo": null,
-    "clientWebsite": null,
+    "clients": [
+      {
+        "name": "Personal Project",
+        "logo": null,
+        "website": null
+      }
+    ],
     "projectLink": "https://github.com/youssef-amazzal/Skynet",
     "gallery": [
       "/assets/portfolio/dev/skynet/img_0.webp",
@@ -35,12 +36,16 @@
     "image": "/assets/portfolio/design/nwita-f-tech/nwita_logo_v1.webp",
     "description": "A visual identity I've created for an instagram page that explains tech and IT concepts in Moroccan Darija",
     "tools": [
-      { "name": "Adobe Illustrator", "icon": "logo-adobe-illustrator" },
-      { "name": "Adobe Photoshop", "icon": "logo-adobe-photoshop" }
+      { "name": "Adobe Illustrator", "icon": "/assets/tools/illustrator.ico" },
+      { "name": "Adobe Photoshop", "icon": "/assets/tools/photoshop.ico" }
     ],
-    "client": "Nwita F Tech",
-    "clientLogo": "/assets/clients/nwita_f_tech.ico",
-    "clientWebsite": "https://www.instagram.com/nwita_ftech/",
+    "clients": [
+      {
+        "name": "Nwita F Tech",
+        "logo": "/assets/clients/nwita_f_tech.ico",
+        "website": "https://www.instagram.com/nwita_ftech/"
+      }
+    ],
     "projectLink": "https://www.instagram.com/nwita_ftech/",
     "date": "2025",
     "gallery": [
@@ -53,6 +58,102 @@
     "id": "ENSET Challenge 2025",
     "title": "ENSET Challenge 2025",
     "category": "design",
-    "image": "assets/portfolio/design/N7C_logo_long.webp"
+    "image": "assets/portfolio/design/enset-challenge/N7C_logo_dark.webp",
+    "description": "A new logo for ENSET Challenge, a yearly event hosted at ENSET Mohammedia, it includes a hackathon and a CTF competitions.",
+    "clients": [
+      {
+        "name": "GDG Club",
+        "logo": "/assets/clients/gdg.ico",
+        "website": "https://www.instagram.com/gdgc_enset/"
+      },
+      {
+        "name": "N7Geeks Club",
+        "logo": "/assets/clients/n7geeks.ico",
+        "website": "https://www.instagram.com/n7geeks/"
+      },
+      {
+        "name": "N7 Security Club",
+        "logo": "/assets/clients/n7sec.ico",
+        "website": "https://www.instagram.com/n7sec.club/"
+      }
+    ],
+    "date": "2025",
+    "tools": [
+      { "name": "Adobe Illustrator", "icon": "/assets/tools/illustrator.ico" }
+    ],
+    "gallery": [
+      "assets/portfolio/design/enset-challenge/N7C_logo_dark.webp",
+      "assets/portfolio/design/enset-challenge/N7C_logo_light.webp",
+      "assets/portfolio/design/enset-challenge/N7C_logo_white.webp",
+      "assets/portfolio/design/enset-challenge/N7C_logo_black.webp"
+    ]
+  },
+  {
+    "id": "enset-challenge-2025",
+    "title": "ENSET Challenge CTF",
+    "category": "design",
+    "image": "/assets/portfolio/design/enset-challenge/N7C_CTF_Slide_1.webp",
+    "description": "A set of Instagram slides designed for the ENSET Challenge 2025 CTF competition, showcasing the event's details and rules.",
+    "clients": [
+      {
+        "name": "GDG Club",
+        "logo": "/assets/clients/gdg.ico",
+        "website": "https://www.instagram.com/gdgc_enset/"
+      },
+      {
+        "name": "N7Geeks Club",
+        "logo": "/assets/clients/n7geeks.ico",
+        "website": "https://www.instagram.com/n7geeks/"
+      },
+      {
+        "name": "N7 Security Club",
+        "logo": "/assets/clients/n7sec.ico",
+        "website": "https://www.instagram.com/n7sec.club/"
+      }
+    ],
+    "date": "2025",
+    "tools": [
+      { "name": "Adobe Photoshop", "icon": "/assets/tools/photoshop.ico" }
+    ],
+    "gallery": [
+      "/assets/portfolio/design/enset-challenge/N7C_CTF_Slide_1.webp",
+      "/assets/portfolio/design/enset-challenge/N7C_CTF_Slide_2.webp",
+      "/assets/portfolio/design/enset-challenge/N7C_CTF_Slide_3.webp",
+      "/assets/portfolio/design/enset-challenge/N7C_CTF_Slide_4.webp",
+      "/assets/portfolio/design/enset-challenge/N7C_CTF_Slide_5.webp"
+    ]
+  },
+  {
+    "id": "enset-challenge-sponsorship-proposal",
+    "title": "ENSET Challenge Sponsorship Proposal",
+    "category": "design",
+    "image": "/assets/portfolio/design/enset-challenge/N7C_sponsorship_cover_general.webp",
+    "description": "3 covers for ENSET Challenge 2025 sponsorship proposals, designed to align with the event's branding and attract potential sponsors.",
+    "clients": [
+      {
+        "name": "GDG Club",
+        "logo": "/assets/clients/gdg.ico",
+        "website": "https://www.instagram.com/gdgc_enset/"
+      },
+      {
+        "name": "N7Geeks Club",
+        "logo": "/assets/clients/n7geeks.ico",
+        "website": "https://www.instagram.com/n7geeks/"
+      },
+      {
+        "name": "N7 Security Club",
+        "logo": "/assets/clients/n7sec.ico",
+        "website": "https://www.instagram.com/n7sec.club/"
+      }
+    ],
+    "date": "2025",
+    "tools": [
+      { "name": "Adobe Photoshop", "icon": "/assets/tools/photoshop.ico" }
+    ],
+    "gallery": [
+      "/assets/portfolio/design/enset-challenge/N7C_sponsorship_cover_general.webp",
+      "/assets/portfolio/design/enset-challenge/N7C_sponsorship_cover_ctf.webp",
+      "/assets/portfolio/design/enset-challenge/N7C_sponsorship_cover_hackathon.webp"
+    ]
   }
 ]

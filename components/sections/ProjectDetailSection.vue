@@ -7,12 +7,10 @@
             <div class="project-info-grid">
                 <div class="project-info-left">
                     <ProjectDescription :project="project" />
-                </div>
-
-                <div class="project-info-right">
+                </div>                <div class="project-info-right">
                     <ProjectMeta :project="project" />
                     <ProjectTools v-if="project.tools && project.tools.length" :project="project" />
-                    <ProjectClient v-if="project.client" :project="project" />
+                    <ProjectClient v-if="project.client || (project.clients && project.clients.length)" :project="project" />
                     <ProjectLink v-if="project.projectLink" :project="project" />
                 </div>
             </div>

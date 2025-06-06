@@ -307,7 +307,6 @@ const setActiveCategory = (category) => {
 }
 
 
-/* Hide desktop tabs by default (mobile first) */
 .desktop-only {
     display: none !important;
 }

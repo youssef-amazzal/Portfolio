@@ -1,5 +1,27 @@
 <template>
-    <div class="meta-item" v-if="project.client">
+    <div class="meta-item" v-if="hasClients">
+        <h4 class="h4">{{ clientsLabel }}</h4>
+        <div class="clients-container">
+            <div v-for="(client, index) in project.clients" :key="index" class="client-info">
+                <a v-if="client.website && client.logo" :href="client.website" target="_blank" rel="noopener noreferrer"
+                    class="client-logo-link">
+                    <img :src="client.logo" :alt="client.name" class="client-logo">
+                </a>
+                <img v-else-if="client.logo" :src="client.logo" :alt="client.name" class="client-logo">
+
+                <div class="client-text">
+                    <a v-if="client.website" :href="client.website" target="_blank" rel="noopener noreferrer"
+                        class="client-name-link">
+                        {{ client.name }}
+                        <ion-icon name="open-outline" class="external-icon"></ion-icon>
+                    </a>
+                    <p v-else>{{ client.name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Backward compatibility for old client format -->
+    <div class="meta-item" v-else-if="project.client">
         <h4 class="h4">Client/Organization</h4>
         <div class="client-info">
             <a v-if="project.clientWebsite && project.clientLogo" :href="project.clientWebsite" target="_blank"
@@ -21,11 +43,24 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+const props = defineProps({
     project: {
         type: Object,
         required: true
     }
+})
+
+// Check if project has the new clients array format
+const hasClients = computed(() => {
+    return props.project.clients && Array.isArray(props.project.clients) && props.project.clients.length > 0
+})
+
+// Dynamic label based on number of clients
+const clientsLabel = computed(() => {
+    if (!hasClients.value) return 'Client/Organization'
+    return props.project.clients.length === 1 ? 'Client/Organization' : 'Clients/Organizations'
 })
 </script>
 
@@ -36,6 +71,12 @@ defineProps({
     font-size: var(--fs-7);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+.clients-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .client-info {
@@ -83,5 +124,17 @@ defineProps({
 .meta-item p {
     color: var(--light-gray);
     font-size: var(--fs-6);
+}
+
+/* Responsive design for multiple clients */
+@media (min-width: 768px) {
+    .clients-container {
+        gap: 16px;
+    }
+
+    .client-logo {
+        width: 45px;
+        height: 45px;
+    }
 }
 </style>
