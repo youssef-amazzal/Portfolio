@@ -1,0 +1,78 @@
+[
+  {
+    "id": "geiw-2025-organizer",
+    "title": "GEIW 2025 Organizer",
+    "category": "event-organization",
+    "date": "2025",
+    "thumbnail": "/assets/social-activities/geiw-2025-thumb.png",
+    "shortDescription": "Served as graphic designer and event organizer for GDG and ENSPEC clubs during GEIW 2025, orchestrating two major competitions with 250+ total participants.",
+    "fullDescription": "<p>During GEIW 2025, I took on the role of graphic designer and event organizer for two prominent student clubs, leading the creation and execution of two distinct but equally impactful competitions.</p><p><strong>ENSET Challenge 2025 with GDG</strong><br>As the graphic designer for Google Developer Group (GDG), I played a crucial role in organizing the ENSET Challenge 2025, a comprehensive technology competition featuring both hackathon and Capture The Flag (CTF) components. This ambitious three-day event attracted over 200 participants representing 21 universities across Morocco.</p><p>The success of this event was the result of more than two months of intensive preparation, during which I was responsible for creating all visual materials, promotional content, and branding elements that helped establish the event's professional identity and attract participants nationwide.</p><p><strong>Speakathon with ENSPEC</strong><br>Simultaneously, I served as the graphic designer for ENSPEC, where we organized a public speaking competition known as the Speakathon. This event was designed to enhance participants' communication and presentation skills through a structured three-phase competition format.</p><p>With over 50 participants, the Speakathon provided a platform for students to develop their public speaking abilities while competing for recognition. My responsibilities included designing all promotional materials, stage backdrops, certificates, and digital content that supported the event's professional presentation and participant engagement.</p>",
+    "roles": [
+      "Graphic Designer for GDG",
+      "Graphic Designer for ENSPEC",
+      "Event Organizer"
+    ],
+    "achievements": [
+      "Successfully organized ENSET Challenge 2025 with 200+ participants from 21 Moroccan universities",
+      "Coordinated 3-day technology competition with 2+ months of preparation",
+      "Designed comprehensive visual branding for hackathon and CTF competitions",
+      "Organized Speakathon public speaking competition with 50+ participants",
+      "Implemented structured 3-phase competition format for skill development",
+      "Created all promotional and event materials for both competitions"
+    ],
+    "organizations": [
+      {
+        "name": "GDG (Google Developer Group)",
+        "role": "Graphic Designer",
+        "logo": "/assets/clients/gdg.ico"
+      },
+      {
+        "name": "ENSPEC",
+        "role": "Graphic Designer",
+        "logo": "/assets/social-activities/enspec-logo.png"
+      }
+    ],
+    "events": [
+      {
+        "name": "ENSET Challenge 2025",
+        "organization": "GDG (Google Developer Group)",
+        "type": "Hackathon & CTF",
+        "participants": "200+",
+        "universities": "21",
+        "duration": "3 days",
+        "description": "A comprehensive technology competition featuring both hackathon and Capture The Flag (CTF) challenges, designed to test participants' programming, problem-solving, and cybersecurity skills."
+      },
+      {
+        "name": "Speakathon",
+        "organization": "ENSPEC",
+        "type": "Public Speaking Competition",
+        "participants": "50+",
+        "phases": "3",
+        "description": "A structured public speaking competition designed to enhance participants' communication and presentation skills through progressive challenges and skill-building exercises."
+      }
+    ],
+    "skills": [
+      "Event Organization & Management",
+      "Graphic Design & Visual Branding",
+      "Project Management & Planning",
+      "Marketing & Promotional Design",
+      "Cross-functional Collaboration"
+    ],
+    "gallery": [
+      "/assets/social-activities/N7C_CTF.webp",
+      "/assets/social-activities/N7C_1.webp",
+      "/assets/social-activities/N7C_2.webp",
+      "/assets/social-activities/speakathon.png",
+      "/assets/social-activities/speakathon-0.jpeg",
+      "/assets/social-activities/speakathon-1.jpeg",
+      "/assets/social-activities/speakathon-2.jpeg"
+    ],
+    "tags": [
+      "Event Organization",
+      "Graphic Design",
+      "Leadership",
+      "Community Engagement",
+      "Competition Management"
+    ]
+  }
+]

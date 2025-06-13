@@ -1,0 +1,34 @@
+[
+  {
+    "id": "bcg-x-ux-ui-intern",
+    "title": "UX/UI Design Intern",
+    "company": "BCG X",
+    "location": "Casablanca",
+    "type": "Internship",
+    "applicationDate": "2025-05-26",
+    "description": "UX/UI Design Internship at BCG X, a leading global consulting firm's digital innovation arm.",
+    "linkedinPost": "https://www.linkedin.com/feed/update/urn:li:activity:7318013624013275136/",
+    "companyWebsite": "https://www.bcg.com/x",
+    "requirements": [
+      "B2B/B2C design portfolio showcasing UX/UI capabilities",
+      "Proficiency in Figma for experience design",
+      "Experience with wireframes, prototypes, and developer handoffs",
+      "Design thinking approach to problem-solving",
+      "Strong communication and collaboration skills",
+      "Bachelor's in Visual Design, HCI, UX, or related field preferred",
+      "Entrepreneurial mindset for diverse challenges",
+      "English proficiency required, French is a plus"
+    ],
+    "skills": [
+      "UX/UI Design",
+      "Figma",
+      "Adobe Creative Suite",
+      "User Research",
+      "Prototyping"
+    ],
+    "documents": {
+      "resume": "/documents/resumes/bcg-x-resume.pdf",
+      "coverLetter": "/documents/cover-letters/bcg-x-cover-letter.pdf"
+    }
+  }
+]
