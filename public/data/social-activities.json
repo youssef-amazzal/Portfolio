@@ -22,14 +22,16 @@
     ],
     "organizations": [
       {
-        "name": "GDG (Google Developer Group)",
+        "name": "Google Developer Group",
         "role": "Graphic Designer",
-        "logo": "/assets/clients/gdg.ico"
+        "logo": "/assets/clients/gdg.ico",
+        "website": "https://gdg.community.dev/gdg-on-campus-enset-ecole-normale-superieure-de-lenseignement-technique-de-mohammedia-mohammedia-morocco/"
       },
       {
         "name": "ENSPEC",
         "role": "Graphic Designer",
-        "logo": "/assets/social-activities/enspec-logo.png"
+        "logo": "/assets/clients/enspec.png",
+        "website": "https://www.instagram.com/enspec.ensetm.official/"
       }
     ],
     "events": [

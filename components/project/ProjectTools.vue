@@ -3,11 +3,11 @@
         <h4 class="h4">Tools & Technologies</h4>
         <ul class="tools-list">
             <li v-for="tool in project.tools" :key="getToolName(tool)" class="tool-tag">
-                <!-- Use img tag for .ico files or file paths -->
-                <img v-if="isImageIcon(tool)" :src="getToolIcon(tool)" :alt="getToolName(tool)"
+                <!-- Use DevIcon if available -->
+                <Icon v-if="getDevIconName(tool)" :name="getDevIconName(tool)" class="tool-icon devicon" />
+                <!-- Fallback to static image for tools without DevIcons -->
+                <img v-else-if="getStaticIconPath(tool)" :src="getStaticIconPath(tool)" :alt="getToolName(tool)"
                     class="tool-icon tool-image" />
-                <!-- Use ion-icon for ionicon names -->
-                <ion-icon v-else-if="isIonIcon(tool)" :name="getToolIcon(tool)" class="tool-icon"></ion-icon>
                 {{ getToolName(tool) }}
             </li>
         </ul>
@@ -15,6 +15,8 @@
 </template>
 
 <script setup>
+import { useToolIcons } from '~/composables/useToolIcons'
+
 defineProps({
     project: {
         type: Object,
@@ -22,35 +24,7 @@ defineProps({
     }
 })
 
-// Helper functions for tools
-const getToolName = (tool) => {
-    return typeof tool === 'string' ? tool : tool.name
-}
-
-const getToolIcon = (tool) => {
-    return typeof tool === 'object' && tool.icon ? tool.icon : null
-}
-
-// Check if the icon is an image file (ico, png, jpg, svg, etc.)
-const isImageIcon = (tool) => {
-    const icon = getToolIcon(tool)
-    if (!icon) return false
-
-    // Check if it's a file path or has image extension
-    return icon.includes('/') ||
-        icon.endsWith('.ico') ||
-        icon.endsWith('.png') ||
-        icon.endsWith('.jpg') ||
-        icon.endsWith('.jpeg') ||
-        icon.endsWith('.svg') ||
-        icon.endsWith('.webp')
-}
-
-// Check if the icon is an ionicon name
-const isIonIcon = (tool) => {
-    const icon = getToolIcon(tool)
-    return icon && !isImageIcon(tool)
-}
+const { getToolName, getDevIconName, getStaticIconPath } = useToolIcons()
 </script>
 
 <style scoped>
@@ -82,7 +56,12 @@ const isIonIcon = (tool) => {
 
 .tool-icon {
     font-size: 14px;
-    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.tool-icon.devicon {
+    width: 14px;
+    height: 14px;
 }
 
 .tool-image {

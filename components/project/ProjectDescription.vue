@@ -17,6 +17,8 @@ defineProps({
 <style scoped>
 .project-description h3 {
     margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
     color: var(--white-2);
 }
 

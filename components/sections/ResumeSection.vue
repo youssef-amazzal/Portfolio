@@ -78,9 +78,9 @@
                         <div class="skills-grid">
                             <div v-for="skill in filteredSkills" :key="skill.name" class="skill-item">
                                 <div class="skill-icon">
-                                    <img v-if="skill.icon.endsWith('.png') || skill.icon.endsWith('.jpg') || skill.icon.endsWith('.webp')"
-                                        :src="`/assets/icons/skills/${skill.icon}`" :alt="skill.name">
-                                    <ion-icon v-else :name="skill.icon"></ion-icon>
+                                    <Icon v-if="hasDevIcon(skill)" :name="getDevIconName(skill)" class="devicon" />
+                                    <ion-icon v-else-if="skill.fallbackIcon" :name="skill.fallbackIcon"
+                                        class="fallback-icon"></ion-icon>
                                 </div>
                                 <span class="skill-name">{{ skill.name }}</span>
                             </div>
@@ -91,9 +91,9 @@
                 <div class="skills-grid mobile-only">
                     <div v-for="skill in filteredSkills" :key="skill.name" class="skill-item">
                         <div class="skill-icon">
-                            <img v-if="skill.icon.endsWith('.png') || skill.icon.endsWith('.jpg') || skill.icon.endsWith('.webp')"
-                                :src="`/assets/icons/skills/${skill.icon}`" :alt="skill.name">
-                            <ion-icon v-else :name="skill.icon"></ion-icon>
+                            <Icon v-if="hasDevIcon(skill)" :name="getDevIconName(skill)" class="devicon" />
+                            <ion-icon v-else-if="skill.fallbackIcon" :name="skill.fallbackIcon"
+                                class="fallback-icon"></ion-icon>
                         </div>
                         <span class="skill-name">{{ skill.name }}</span>
                     </div>
@@ -105,6 +105,8 @@
 
 <script setup>
 import { ref, computed } from 'vue'
+
+const { getToolName, getDevIconName, hasDevIcon, getIconType } = useToolIcons()
 
 const activeCategory = ref('all')
 
@@ -156,29 +158,77 @@ const experience = [
 
 const skills = [
     // Programming Languages
-    { name: 'Java', category: 'Programming Languages', icon: 'logo-java' },
-    { name: 'C++', category: 'Programming Languages', icon: 'code-slash-outline' },
-    { name: 'JavaScript', category: 'Programming Languages', icon: 'logo-javascript' },
-    { name: 'Dart', category: 'Programming Languages', icon: 'diamond-outline' },
+    {
+        name: 'Java',
+        category: 'Programming Languages'
+    },
+    {
+        name: 'C++',
+        category: 'Programming Languages'
+    },
+    {
+        name: 'JavaScript',
+        category: 'Programming Languages'
+    },
+    {
+        name: 'Dart',
+        category: 'Programming Languages'
+    },
 
     // Frameworks
-    { name: 'Spring Boot', category: 'Frameworks', icon: 'leaf-outline' },
-    { name: 'Flutter', category: 'Frameworks', icon: 'phone-portrait-outline' },
-    { name: 'JavaFX', category: 'Frameworks', icon: 'desktop-outline' },
-    { name: 'Vue.js', category: 'Frameworks', icon: 'logo-vue' },
+    {
+        name: 'Spring Boot',
+        category: 'Frameworks'
+    },
+    {
+        name: 'Flutter',
+        category: 'Frameworks'
+    },
+    {
+        name: 'JavaFX',
+        category: 'Frameworks'
+    },
+    {
+        name: 'Vue.js',
+        category: 'Frameworks'
+    },
 
     // Databases
-    { name: 'PostgreSQL', category: 'Databases', icon: 'server-outline' },
-    { name: 'MySQL', category: 'Databases', icon: 'database-outline' },
+    {
+        name: 'PostgreSQL',
+        category: 'Databases'
+    },
+    {
+        name: 'MySQL',
+        category: 'Databases'
+    },
 
     // Tools
-    { name: 'Git', category: 'Tools', icon: 'git-branch-outline' },
-    { name: 'Docker', category: 'Tools', icon: 'cube-outline' },
+    {
+        name: 'Git',
+        category: 'Tools'
+    },
+    {
+        name: 'Docker',
+        category: 'Tools'
+    },
 
-    // Languages (Spoken)
-    { name: 'Arabic', category: 'Languages', icon: 'language-outline' },
-    { name: 'English', category: 'Languages', icon: 'language-outline' },
-    { name: 'French', category: 'Languages', icon: 'language-outline' }
+    // Languages (Spoken) - keeping fallback for these
+    {
+        name: 'Arabic',
+        category: 'Languages',
+        fallbackIcon: 'language-outline'
+    },
+    {
+        name: 'English',
+        category: 'Languages',
+        fallbackIcon: 'language-outline'
+    },
+    {
+        name: 'French',
+        category: 'Languages',
+        fallbackIcon: 'language-outline'
+    }
 ];
 
 const skillCategories = [
@@ -418,18 +468,23 @@ const setActiveCategory = (category) => {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-color);
     flex-shrink: 0;
+    transition: transform 0.2s ease;
 }
 
-.skill-icon img {
+.skill-icon .devicon {
     width: 18px;
     height: 18px;
-    object-fit: contain;
+    font-size: 18px;
 }
 
-.skill-icon ion-icon {
+.skill-icon .fallback-icon {
     font-size: 18px;
+    color: var(--primary-color);
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.1);
 }
 
 .skill-name {
@@ -484,12 +539,13 @@ const setActiveCategory = (category) => {
         height: 22px;
     }
 
-    .skill-icon img {
+    .skill-icon .devicon {
         width: 20px;
         height: 20px;
+        font-size: 20px;
     }
 
-    .skill-icon ion-icon {
+    .skill-icon .fallback-icon {
         font-size: 20px;
     }
 
@@ -517,12 +573,13 @@ const setActiveCategory = (category) => {
         height: 24px;
     }
 
-    .skill-icon img {
+    .skill-icon .devicon {
         width: 22px;
         height: 22px;
+        font-size: 22px;
     }
 
-    .skill-icon ion-icon {
+    .skill-icon .fallback-icon {
         font-size: 22px;
     }
 
@@ -547,12 +604,13 @@ const setActiveCategory = (category) => {
         height: 26px;
     }
 
-    .skill-icon img {
+    .skill-icon .devicon {
         width: 24px;
         height: 24px;
+        font-size: 24px;
     }
 
-    .skill-icon ion-icon {
+    .skill-icon .fallback-icon {
         font-size: 24px;
     }
 }
@@ -580,12 +638,13 @@ const setActiveCategory = (category) => {
         height: 28px;
     }
 
-    .skill-icon img {
+    .skill-icon .devicon {
         width: 26px;
         height: 26px;
+        font-size: 26px;
     }
 
-    .skill-icon ion-icon {
+    .skill-icon .fallback-icon {
         font-size: 26px;
     }
 

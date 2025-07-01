@@ -9,7 +9,27 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true,
-    "node_modules": true
+    "node_modules": true,
+    "scripts": true,
+    "eslint.config.mjs": true,
+    "nuxt.config.ts": true,
+    "package-lock.json": true,
+    "package.json": true,
+    ".gitignore": true,
+    "plugins": true,
+    ".output": true,
+    ".nuxt": true
   },
-  "hide-files.files": ["node_modules"]
+  "hide-files.files": [
+    "node_modules",
+    "scripts",
+    "eslint.config.mjs",
+    "nuxt.config.ts",
+    "package-lock.json",
+    "package.json",
+    ".gitignore",
+    "plugins",
+    ".output",
+    ".nuxt"
+  ]
 }

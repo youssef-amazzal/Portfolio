@@ -33,19 +33,8 @@
                         <h1 class="activity-title">{{ activity.title }}</h1>
                         <p class="activity-date">{{ activity.date }}</p>
 
-                        <div class="organizations" v-if="activity.organizations?.length">
-                            <h3>Organizations</h3>
-                            <div class="org-grid">
-                                <div v-for="org in activity.organizations" :key="org.name" class="org-card">
-                                    <img v-if="org.logo" :src="org.logo" :alt="org.name" class="org-logo"
-                                        @error="handleOrgLogoError" />
-                                    <div class="org-info">
-                                        <h4>{{ org.name }}</h4>
-                                        <p>{{ org.role }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <OrganizationsCard v-if="activity.organizations?.length" :organizations="activity.organizations"
+                            title="Organizations" title-class="h3" />
                     </div>
                 </div>
             </header>
@@ -145,6 +134,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import OrganizationsCard from '~/components/OrganizationsCard.vue';
 
 const route = useRoute();
 const activity = ref(null);
@@ -191,10 +181,6 @@ const formatCategory = (category) => {
 const handleImageError = (event) => {
     event.target.src = '/assets/images/default-activity.svg';
     event.target.onerror = null;
-};
-
-const handleOrgLogoError = (event) => {
-    event.target.style.display = 'none';
 };
 
 const handleGalleryImageError = (event) => {
@@ -316,44 +302,6 @@ onMounted(() => {
     font-size: var(--fs-5);
     font-weight: var(--fw-500);
     margin-bottom: 20px;
-}
-
-.organizations h3 {
-    color: var(--white-2);
-    font-size: var(--fs-4);
-    margin-bottom: 15px;
-}
-
-.org-grid {
-    display: grid;
-    gap: 15px;
-}
-
-.org-card {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--eerie-black-2);
-    border: 1px solid var(--jet);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.org-logo {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-
-.org-info h4 {
-    color: var(--primary-color);
-    font-size: var(--fs-5);
-    margin-bottom: 4px;
-}
-
-.org-info p {
-    color: var(--light-gray-70);
-    font-size: var(--fs-7);
 }
 
 .activity-main section {
