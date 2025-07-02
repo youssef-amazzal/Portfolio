@@ -78,6 +78,39 @@
     ]
   },
   {
+    "id":"faseeh",
+    "title": "Faseeh",
+    "category": "development",
+    "image": "/assets/portfolio/dev/faseeh/faseeh.webp",
+    "aspectRatio": "horizontal",
+    "description": "Faseeh is a desktop language learning toolkit that turns content you love—videos, articles, and books—into your personal study material. It's designed for the self-driven learner who is tired of generic lessons and wants to immerse themselves in authentic content.  Instead of juggling multiple applications, Faseeh provides a unified framework to bring learning tools together. It creates a cohesive, distraction-free environment where functionality, delivered via plugins, can work in harmony.",
+    "tools": [
+      { "name": "Electron" },
+      { "name": "Node.js" },
+      { "name": "Vue.js" },
+      { "name": "Tailwind CSS" },
+      { "name": "SQLite" }
+    ],
+    "date": "2025",
+    "clients": [
+      {
+        "name": "Personal Project",
+        "logo": null,
+        "website": null
+      }
+    ],
+    "projectLink": "https://github.com/faseeh-app/Faseeh",
+    "gallery": [
+      "/assets/portfolio/dev/faseeh/faseeh.webp",
+      "/assets/portfolio/dev/faseeh/faseeh_1.webp",
+      "/assets/portfolio/dev/faseeh/faseeh_2.webp",
+      "/assets/portfolio/dev/faseeh/faseeh_3.webp",
+      "/assets/portfolio/dev/faseeh/faseeh_4.webp",
+      "/assets/portfolio/dev/faseeh/faseeh_5.webp",
+      "/assets/portfolio/dev/faseeh/faseeh_6.webp"
+    ]
+  },
+  {
     "id": "enset-challenge-2025-24h",
     "title": "ENSET Challenge 2025 24h",
     "category": "design",

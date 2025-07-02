@@ -13,6 +13,8 @@ const toolIconMap = {
   'JavaFX': 'devicon:java', // JavaFX uses Java icon
   'Vue.js': 'devicon:vuejs',
   'Vue': 'devicon:vuejs',
+  'Electron': 'devicon:electron',
+  'Tailwind CSS': 'devicon:tailwindcss',
 
   // Databases
   'MySQL': 'devicon:mysql',
